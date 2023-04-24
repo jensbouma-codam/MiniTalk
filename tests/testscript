@@ -1,0 +1,9 @@
+#!/bin/bash
+
+counter=1
+while [ $counter -le 100001  ]
+do
+	./bin/client $@ "$counter"
+	# time cat ./tests/100.txt | ./bin/client $@
+	((counter++))
+done
